@@ -1,1117 +1,130 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>Hina Arshad | Generative AI Developer</title>
-
-<meta name="description"
-content="Explore Hina Arshad's portfolio featuring Generative AI, AI Agents, RAG applications and AI projects.">
-
-<meta name="author" content="Hina Arshad">
-
-<style>
-
-/* =========================
-   1. GLOBAL SETTINGS
-========================= */
-
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    scroll-behavior: smooth;
-}
-
-:root {
-    --primary: #6858d8;
-    --primary-dark: #5142bb;
-    --navy: #26375f;
-    --text: #59657c;
-    --muted: #8791a5;
-    --background: #f8f9ff;
-    --white: #ffffff;
-    --border: #e9eaf4;
-    --shadow: 0 8px 30px rgba(39, 53, 91, 0.07);
-}
-
-body {
-    font-family: Arial, Helvetica, sans-serif;
-    background: var(--background);
-    color: var(--text);
-    line-height: 1.75;
-}
-
-.container {
-    width: 88%;
-    max-width: 1160px;
-    margin: auto;
-}
-
-section {
-    padding: 85px 0;
-    scroll-margin-top: 75px;
-}
-
-.section-heading {
-    color: var(--navy);
-    font-size: 32px;
-    margin-bottom: 8px;
-    letter-spacing: -0.7px;
-}
-
-.section-description {
-    color: var(--muted);
-    font-size: 14px;
-    margin-bottom: 32px;
-}
-
-/* =========================
-   2. NAVIGATION
-========================= */
-
-nav {
-    position: sticky;
-    top: 0;
-    z-index: 1000;
-    background: rgba(255,255,255,0.96);
-    backdrop-filter: blur(12px);
-    box-shadow: 0 2px 15px rgba(35,50,90,0.06);
-}
-
-.nav-content {
-    min-height: 72px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.logo {
-    color: var(--navy);
-    font-size: 23px;
-    font-weight: 800;
-    text-decoration: none;
-    letter-spacing: -0.7px;
-}
-
-.nav-links {
-    display: flex;
-    align-items: center;
-    gap: 25px;
-}
-
-.nav-links a {
-    text-decoration: none;
-    color: var(--text);
-    font-size: 13px;
-    font-weight: 600;
-    transition: 0.3s;
-}
-
-.nav-links a:hover {
-    color: var(--primary);
-}
-
-.menu-btn {
-    display: none;
-    border: none;
-    background: transparent;
-    color: var(--navy);
-    font-size: 26px;
-    cursor: pointer;
-}
-
-/* =========================
-   3. HERO SECTION
-========================= */
-
-.hero {
-    min-height: 570px;
-    display: flex;
-    align-items: center;
-    background:
-        radial-gradient(circle at 85% 20%, #e8e5ff 0, transparent 35%),
-        linear-gradient(120deg, #ffffff, #f0f1ff);
-}
-
-.hero-content {
-    display: grid;
-    grid-template-columns: 1.5fr 0.8fr;
-    align-items: center;
-    gap: 65px;
-}
-
-.eyebrow {
-    display: inline-block;
-    color: var(--primary);
-    font-size: 12px;
-    font-weight: 800;
-    letter-spacing: 2px;
-    margin-bottom: 18px;
-}
-
-.hero h1 {
-    color: var(--navy);
-    font-size: clamp(38px, 5vw, 58px);
-    line-height: 1.2;
-    letter-spacing: -1.5px;
-    margin-bottom: 15px;
-}
-
-.hero h2 {
-    color: var(--primary);
-    font-size: 25px;
-    margin-bottom: 18px;
-}
-
-.hero-description {
-    max-width: 620px;
-    font-size: 15px;
-    color: var(--text);
-    margin-bottom: 28px;
-}
-
-.hero-buttons {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 12px;
-}
-
-.btn {
-    display: inline-block;
-    text-decoration: none;
-    padding: 12px 23px;
-    border-radius: 8px;
-    font-size: 13px;
-    font-weight: 700;
-    transition: 0.3s;
-}
-
-.btn-primary {
-    background: var(--primary);
-    color: white;
-    border: 1px solid var(--primary);
-}
-
-.btn-primary:hover {
-    background: var(--primary-dark);
-    transform: translateY(-2px);
-}
-
-.btn-outline {
-    color: var(--primary);
-    background: white;
-    border: 1px solid #cfc9ff;
-}
-
-.btn-outline:hover {
-    background: #f0eeff;
-}
-
-.profile-visual {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.profile-circle {
-    width: 245px;
-    height: 245px;
-    border-radius: 50%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background: linear-gradient(140deg, #7163e5, #aaa2ff);
-    color: white;
-    font-size: 75px;
-    font-weight: 800;
-    box-shadow: 0 20px 55px rgba(104,88,216,0.25);
-    border: 9px solid white;
-}
-
-/* =========================
-   4. ABOUT SECTION
-========================= */
-
-.about-section {
-    background: white;
-}
-
-.about-content {
-    max-width: 850px;
-    font-size: 15px;
-}
-
-.about-content p {
-    margin-bottom: 16px;
-}
-
-/* =========================
-   5. SKILLS SECTION
-========================= */
-
-.skills-grid {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 20px;
-}
-
-.skill-card {
-    background: white;
-    padding: 25px;
-    border: 1px solid var(--border);
-    border-radius: 13px;
-    box-shadow: var(--shadow);
-    transition: 0.3s;
-}
-
-.skill-card:hover {
-    transform: translateY(-4px);
-}
-
-.skill-card h3 {
-    color: var(--navy);
-    font-size: 17px;
-    margin-bottom: 15px;
-}
-
-.skill-tags {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 9px;
-}
-
-.skill-tag {
-    background: #f0efff;
-    color: #5c50c2;
-    padding: 6px 12px;
-    border-radius: 30px;
-    font-size: 12px;
-}
-
-/* =========================
-   6. PROJECTS SECTION
-========================= */
-
-.projects-section {
-    background: white;
-}
-
-.projects-grid {
-    display: grid;
-    grid-template-columns: repeat(3, minmax(0, 1fr));
-    gap: 23px;
-}
-
-.project-card {
-    background: white;
-    padding: 25px;
-    border: 1px solid var(--border);
-    border-radius: 15px;
-    box-shadow: var(--shadow);
-    display: flex;
-    flex-direction: column;
-    transition: 0.3s;
-}
-
-.project-card:hover {
-    transform: translateY(-6px);
-    box-shadow: 0 15px 35px rgba(39,53,91,0.12);
-    border-color: #d9d3ff;
-}
-
-.project-number {
-    color: var(--primary);
-    font-size: 12px;
-    font-weight: 800;
-    letter-spacing: 1px;
-    margin-bottom: 12px;
-}
-
-.project-card h3 {
-    color: var(--navy);
-    font-size: 18px;
-    line-height: 1.4;
-    margin-bottom: 12px;
-}
-
-.project-card p {
-    color: var(--text);
-    font-size: 13px;
-    margin-bottom: 17px;
-    flex-grow: 1;
-}
-
-.project-tech {
-    color: var(--primary);
-    font-size: 11px;
-    line-height: 1.8;
-    padding: 12px 0;
-    border-top: 1px solid var(--border);
-    border-bottom: 1px solid var(--border);
-    margin-bottom: 15px;
-}
-
-.project-actions {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 13px;
-}
-
-.project-link {
-    color: var(--primary);
-    font-size: 12px;
-    font-weight: 800;
-    text-decoration: none;
-}
-
-.project-link:hover {
-    color: var(--primary-dark);
-    text-decoration: underline;
-}
-
-/* =========================
-   7. EDUCATION SECTION
-========================= */
-
-.education-card {
-    max-width: 780px;
-    background: white;
-    border: 1px solid var(--border);
-    border-radius: 15px;
-    padding: 30px;
-    box-shadow: var(--shadow);
-    display: flex;
-    gap: 20px;
-    align-items: center;
-}
-
-.education-icon {
-    width: 60px;
-    height: 60px;
-    min-width: 60px;
-    border-radius: 13px;
-    background: #efedff;
-    color: var(--primary);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 25px;
-}
-
-.education-card h3 {
-    color: var(--navy);
-    font-size: 18px;
-    margin-bottom: 5px;
-}
-
-.education-card p {
-    font-size: 13px;
-}
-
-.education-year {
-    display: inline-block;
-    margin-top: 10px;
-    background: #f0efff;
-    color: var(--primary);
-    padding: 5px 12px;
-    border-radius: 20px;
-    font-size: 11px;
-    font-weight: bold;
-}
-
-/* =========================
-   8. CONTACT SECTION
-========================= */
-
-.contact-section {
-    background: linear-gradient(120deg, #f0efff, #f9faff);
-}
-
-.contact-card {
-    max-width: 850px;
-    background: white;
-    border: 1px solid var(--border);
-    border-radius: 16px;
-    padding: 35px;
-    box-shadow: var(--shadow);
-}
-
-.contact-card p {
-    font-size: 14px;
-    margin-bottom: 20px;
-}
-
-.contact-links {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 12px;
-}
-
-.contact-link {
-    display: inline-block;
-    text-decoration: none;
-    color: var(--primary);
-    background: #f1efff;
-    padding: 9px 16px;
-    border-radius: 8px;
-    font-size: 13px;
-    font-weight: bold;
-}
-
-/* =========================
-   9. FOOTER
-========================= */
-
-footer {
-    background: var(--navy);
-    color: white;
-    padding: 27px 0;
-    text-align: center;
-}
-
-.footer-name {
-    font-weight: bold;
-    font-size: 17px;
-    margin-bottom: 5px;
-}
-
-footer p {
-    font-size: 12px;
-    color: #d9def0;
-}
-
-/* =========================
-   10. MOBILE RESPONSIVE
-========================= */
-
-@media(max-width: 900px) {
-
-    .projects-grid {
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-    }
-
-    .hero-content {
-        gap: 30px;
-    }
-
-    .profile-circle {
-        width: 190px;
-        height: 190px;
-        font-size: 60px;
-    }
-}
-
-@media(max-width: 650px) {
-
-    .container {
-        width: 90%;
-    }
-
-    .nav-content {
-        min-height: 65px;
-    }
-
-    .menu-btn {
-        display: block;
-    }
-
-    .nav-links {
-        display: none;
-        position: absolute;
-        top: 65px;
-        left: 0;
-        width: 100%;
-        padding: 20px 5%;
-        background: white;
-        box-shadow: 0 8px 15px rgba(0,0,0,0.08);
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 16px;
-    }
-
-    .nav-links.active {
-        display: flex;
-    }
-
-    .hero {
-        padding: 65px 0;
-    }
-
-    .hero-content {
-        display: flex;
-        flex-direction: column-reverse;
-        align-items: flex-start;
-    }
-
-    .profile-circle {
-        width: 145px;
-        height: 145px;
-        font-size: 43px;
-    }
-
-    .hero h1 {
-        font-size: 38px;
-    }
-
-    .hero h2 {
-        font-size: 21px;
-    }
-
-    section {
-        padding: 65px 0;
-    }
-
-    .section-heading {
-        font-size: 27px;
-    }
-
-    .skills-grid,
-    .projects-grid {
-        grid-template-columns: 1fr;
-    }
-
-    .education-card {
-        align-items: flex-start;
-        padding: 22px;
-    }
-
-    .contact-card {
-        padding: 25px;
-    }
-}
-html {
-    scroll-behavior: smooth;
-    scroll-padding-top: 90px;
-}
-
-section[id] {
-    scroll-margin-top: 90px;
-}
-
-</style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home | Hina Arshad</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
 </head>
-
 <body>
 
-<!-- NAVIGATION -->
-<nav>
-<div class="container nav-content">
 
-    <a href="#home" class="logo">Hina Arshad</a>
-
-    <button class="menu-btn"
-            onclick="toggleMenu()"
-            aria-label="Toggle navigation">
+    <button class="mobile-menu-btn" id="mobileSidebarToggle"
+            aria-label="Open sidebar" aria-expanded="false">
         ☰
     </button>
 
-    <div class="nav-links" id="navLinks">
-        <a href="#home" onclick="closeMenu()">Home</a>
-        <a href="#about" onclick="closeMenu()">About</a>
-        <a href="#skills" onclick="closeMenu()">Skills</a>
-        <a href="#projects" onclick="closeMenu()">Projects</a>
-        <a href="#education" onclick="closeMenu()">Education</a>
-        <a href="#contact" onclick="closeMenu()">Contact</a>
-    </div>
+    <div class="sidebar-overlay" id="sidebarOverlay"></div>
 
-</div>
-</nav>
+    <aside class="sidebar" id="portfolioSidebar">
 
-<!-- HERO -->
-<section class="hero" id="home">
-<div class="container hero-content">
-
-    <div>
-        <span class="eyebrow">
-            GENERATIVE AI & APPLICATION DEVELOPMENT
-        </span>
-
-        <h1>Hi, I'm Hina Arshad</h1>
-
-        <h2>Generative AI Developer</h2>
-
-        <p class="hero-description">
-            I am a Computer Science graduate interested in
-            building practical AI applications. My project
-            work focuses on Generative AI, AI Agents,
-            Retrieval Augmented Generation (RAG), and
-            intelligent automation.
-        </p>
-
-        <div class="hero-buttons">
-            <a href="#projects" class="btn btn-primary">
-                Explore My Projects
+        <div class="sidebar-header">
+            <a href="index.html" class="sidebar-logo">
+                Hina<span>.</span>
             </a>
 
-            <a href="#contact" class="btn btn-outline">
-                Let's Connect
+            <button class="sidebar-toggle" id="sidebarToggle"
+                    aria-label="Collapse sidebar" aria-expanded="true">
+                ‹
+            </button>
+        </div>
+
+        <div class="sidebar-profile">
+            <div class="profile-avatar">HA</div>
+            <h3>Hina Arshad</h3>
+            <p>Generative AI Developer</p>
+        </div>
+
+        <div class="sidebar-divider"></div>
+
+        <p class="sidebar-heading">MAIN MENU</p>
+
+        <nav class="sidebar-nav">
+            
+            <a href="index.html" class="sidebar-link active">
+                <span class="sidebar-icon">⌂</span>
+                <span class="sidebar-label">Home</span>
             </a>
-        </div>
-    </div>
+        
+            <a href="about.html" class="sidebar-link ">
+                <span class="sidebar-icon">◉</span>
+                <span class="sidebar-label">About</span>
+            </a>
+        
+            <a href="skills.html" class="sidebar-link ">
+                <span class="sidebar-icon">✦</span>
+                <span class="sidebar-label">Skills</span>
+            </a>
+        
+            <a href="projects.html" class="sidebar-link ">
+                <span class="sidebar-icon">▦</span>
+                <span class="sidebar-label">Projects</span>
+            </a>
+        
+            <a href="education.html" class="sidebar-link ">
+                <span class="sidebar-icon">▤</span>
+                <span class="sidebar-label">Education</span>
+            </a>
+        
+            <a href="contact.html" class="sidebar-link ">
+                <span class="sidebar-icon">✉</span>
+                <span class="sidebar-label">Contact</span>
+            </a>
+        
+        </nav>
 
-    <div class="profile-visual">
-        <div class="profile-circle">HA</div>
-    </div>
+        <div class="sidebar-bottom">
+            <button class="theme-btn" id="themeToggle"
+                    aria-label="Change theme">
+                ☀️ / 🌙
+                <span class="sidebar-label">Change Theme</span>
+            </button>
 
-</div>
-</section>
-
-<!-- ABOUT -->
-<section class="about-section" id="about">
-<div class="container">
-
-    <h2 class="section-heading">About Me</h2>
-
-    <p class="section-description">
-        A little introduction about my journey
-    </p>
-
-    <div class="about-content">
-
-        <p>
-            I am a Computer Science graduate with an interest
-            in Artificial Intelligence and application development.
-        </p>
-
-        <p>
-            I build practical projects using modern AI tools
-            and technologies. My work includes AI-powered
-            applications, multi-agent workflows, document-based
-            question answering, and intelligent automation.
-        </p>
-
-        <p>
-            I enjoy learning through hands-on development,
-            improving my technical skills, and creating
-            useful technology solutions.
-        </p>
-
-    </div>
-</div>
-</section>
-
-
-<!-- SKILLS -->
-<section id="skills">
-<div class="container">
-
-    <h2 class="section-heading">Technical Skills</h2>
-
-    <p class="section-description">
-        Technologies and tools I use to build
-        AI-powered applications and solutions.
-    </p>
-
-    <div class="skills-grid">
-
-        <!-- 01: AI SPECIALIZATION -->
-        <div class="skill-card">
-
-            <span class="project-number">01</span>
-
-            <h3>AI & Generative AI</h3>
-
-            <div class="skill-tags">
-                <span class="skill-tag">Generative AI</span>
-                <span class="skill-tag">AI Agents</span>
-                <span class="skill-tag">Agentic AI</span>
-                <span class="skill-tag">RAG Applications</span>
-                <span class="skill-tag">AI Automation</span>
-            </div>
-
+            <p class="sidebar-caption">Portfolio 4.0</p>
         </div>
 
-        <!-- 02: MODELS AND RETRIEVAL -->
-        <div class="skill-card">
+    </aside>
+    
 
-            <span class="project-number">02</span>
+<main>
 
-            <h3>AI Models & Retrieval</h3>
-
-            <div class="skill-tags">
-                <span class="skill-tag">Google Gemini</span>
-                <span class="skill-tag">Groq API</span>
-                <span class="skill-tag">FAISS</span>
-                <span class="skill-tag">Sentence Transformers</span>
-                <span class="skill-tag">TensorFlow</span>
-            </div>
-
-        </div>
-
-        <!-- 03: DEVELOPMENT -->
-        <div class="skill-card">
-
-            <span class="project-number">03</span>
-
-            <h3>Application Development</h3>
-
-            <div class="skill-tags">
-                <span class="skill-tag">Python</span>
-                <span class="skill-tag">FastAPI</span>
-                <span class="skill-tag">Streamlit</span>
-            </div>
-
-        </div>
-
-        <!-- 04: TOOLS -->
-        <div class="skill-card">
-
-            <span class="project-number">04</span>
-
-            <h3>Automation & Development Tools</h3>
-
-            <div class="skill-tags">
-                <span class="skill-tag">n8n</span>
-                <span class="skill-tag">GitHub</span>
-                <span class="skill-tag">Google Colab</span>
-                <span class="skill-tag">Supabase</span>
-            </div>
-
-        </div>
-
-    </div>
-</div>
-</section>
-
-
-
-<!-- FEATURED PROJECTS -->
-<section class="projects-section" id="projects">
-<div class="container">
-
-    <h2 class="section-heading">Featured Projects</h2>
-
-    <p class="section-description">
-        Explore my practical work in Generative AI,
-        AI applications, machine learning and automation.
-    </p>
-
-    <div class="projects-grid">
-
-        <!-- PROJECT 01 -->
-        <div class="project-card">
-
-            <span class="project-number">PROJECT 01</span>
-
-            <h3>AgriVision AI</h3>
-
-            <p>
-                An AI-powered agriculture application that
-                analyzes plant leaf images to identify
-                supported crop diseases using a trained
-                deep learning model.
-            </p>
-
-            <div class="project-tech">
-                TensorFlow · MobileNetV2 · Streamlit · Python
-            </div>
-
-            <div class="project-actions">
-                <a class="project-link"
-                   href="https://github.com/hinaarshad302/agrivision-ai"
-                   target="_blank"
-                   rel="noopener noreferrer">
-                   GitHub Repository ↗
-                </a>
-            </div>
-
-        </div>
-
-
-        <!-- PROJECT 02 -->
-        <div class="project-card">
-
-            <span class="project-number">PROJECT 02</span>
-
-            <h3>Urdu Resume Skill Extractor</h3>
-
-            <p>
-                An AI-assisted resume analysis application
-                that extracts candidate information from
-                PDF, DOCX and TXT files and supports
-                English and Urdu CV generation.
-            </p>
-
-            <div class="project-tech">
-                Python · Streamlit · Google Gemini · PDF Processing
-            </div>
-
-            <div class="project-actions">
-
-                <a class="project-link"
-                   href="https://github.com/hinaarshad302/urdu-resume-skill-extractor"
-                   target="_blank"
-                   rel="noopener noreferrer">
-                   GitHub ↗
-                </a>
-
-                <a class="project-link"
-                   href="https://urdu-resume-skill-extractor-3vjtecyvnp6rgfuqgf7t8w.streamlit.app/"
-                   target="_blank"
-                   rel="noopener noreferrer">
-                   Live Demo ↗
-                </a>
-
-            </div>
-
-        </div>
-
-
-        <!-- PROJECT 03 -->
-        <div class="project-card">
-
-            <span class="project-number">PROJECT 03</span>
-
-            <h3>Nexora AI</h3>
-
-            <p>
-                A multi-agent AI workspace with specialized
-                agents for task planning, execution,
-                quality checking and final response review.
-            </p>
-
-            <div class="project-tech">
-                Python · CrewAI · Groq API · Streamlit · Supabase
-            </div>
-
-            <div class="project-actions">
-
-                <a class="project-link"
-                   href="https://github.com/hinaarshad302/parallel-multi-agent-system"
-                   target="_blank"
-                   rel="noopener noreferrer">
-                   GitHub ↗
-                </a>
-
-                <a class="project-link"
-                   href="https://parallel-multi-agent-system-kijnmteevpxi38tvdrrafi.streamlit.app/"
-                   target="_blank"
-                   rel="noopener noreferrer">
-                   Live Demo ↗
-                </a>
-
-            </div>
-
-        </div>
-
-
-        <!-- PROJECT 04 -->
-        <div class="project-card">
-
-            <span class="project-number">PROJECT 04</span>
-
-            <h3>Hospital Knowledge Base Assistant</h3>
-
-            <p>
-                A document-based AI question-answering
-                application that retrieves relevant
-                information from hospital documents
-                to generate contextual answers.
-            </p>
-
-            <div class="project-tech">
-                Python · RAG · FAISS · Sentence Transformers · Gemini
-            </div>
-
-            <div class="project-actions">
-
-                <a class="project-link"
-                   href="https://github.com/hinaarshad302/hospital-knowledge-base-assistant"
-                   target="_blank"
-                   rel="noopener noreferrer">
-                   GitHub Repository ↗
-                </a>
-
-            </div>
-
-        </div>
-
-
-        <!-- PROJECT 05 -->
-        <div class="project-card">
-
-            <span class="project-number">PROJECT 05</span>
-
-            <h3>AI Email Generator</h3>
-
-            <p>
-                An AI-powered email writing application
-                that generates professional emails based
-                on purpose, recipient, tone, length
-                and language.
-            </p>
-
-            <div class="project-tech">
-                Python · Streamlit · Google Gemini API
-            </div>
-
-            <div class="project-actions">
-
-                <a class="project-link"
-                   href="https://github.com/hinaarshad302/ai-email-generator"
-                   target="_blank"
-                   rel="noopener noreferrer">
-                   GitHub ↗
-                </a>
-
-                <a class="project-link"
-                   href="https://ai-email-generator-dn98jmhosvrclnsufzgzha.streamlit.app/"
-                   target="_blank"
-                   rel="noopener noreferrer">
-                   Live Demo ↗
-                </a>
-
-            </div>
-
-        </div>
-
-
-        <!-- PROJECT 06 -->
-        <div class="project-card">
-
-            <span class="project-number">PROJECT 06</span>
-
-            <h3>Comment & Emoji-to-Content Assistant</h3>
-
-            <p>
-                An AI content creation application that
-                transforms topics, comments and emojis
-                into social media content for different
-                platforms and languages.
-            </p>
-
-            <div class="project-tech">
-                Python · Streamlit · Google Gemini API
-            </div>
-
-            <div class="project-actions">
-
-                <a class="project-link"
-                   href="https://github.com/hinaarshad302/Comment-Content-Assistant"
-                   target="_blank"
-                   rel="noopener noreferrer">
-                   GitHub Repository ↗
-                </a>
-
-            </div>
-
-        </div>
-
-    </div>
-</div>
-</section>
-
-<!-- EDUCATION -->
-<section id="education">
-<div class="container">
-
-    <h2 class="section-heading">Education</h2>
-
-    <p class="section-description">
-        My academic background
-    </p>
-
-    <div class="education-card">
-
-        <div class="education-icon">🎓</div>
-
+<section class="hero page-section">
+    <div class="container hero-content">
         <div>
-            <h3>Bachelor of Science in Computer Science</h3>
+            <p class="subtitle">HELLO, WELCOME TO MY PORTFOLIO</p>
+            <h1>Hi, I'm <span>Hina Arshad</span></h1>
+            <h2>Generative AI Developer</h2>
 
             <p>
-                Government Khawaja Fareed Graduate College
+                I hold a Bachelor's degree in Computer Science (BSCS)
+                and focus on developing practical AI-powered applications,
+                intelligent agents, and automation solutions.
             </p>
 
             <p>
-                Rahim Yar Khan, Pakistan
+                My work includes Generative AI, AI Agents,
+                Retrieval-Augmented Generation (RAG), and AI application
+                development. I enjoy building projects using modern
+                AI tools and technologies.
             </p>
 
-            <span class="education-year">
-                Graduated 2026
-            </span>
+            <div class="hero-buttons">
+                <a href="projects.html" class="btn">Explore My Projects</a>
+                <a href="contact.html" class="btn btn-outline">Contact Me</a>
+            </div>
         </div>
-
     </div>
-</div>
 </section>
 
-<!-- CONTACT -->
-<section class="contact-section" id="contact">
-<div class="container">
+</main>
 
-    <h2 class="section-heading">Let's Connect</h2>
-
-    <p class="section-description">
-        Open to learning, AI projects and professional opportunities
-    </p>
-
-    <div class="contact-card">
-
-        <p>
-            Interested in my work or want to discuss an
-            AI project? Feel free to connect with me.
-        </p>
-
-        <div class="contact-links">
-
-            <a class="contact-link"
-               href="https://github.com/hinaarshad302"
-               target="_blank" rel="noopener noreferrer">
-               GitHub ↗
-            </a>
-
-            <!-- Replace # with your real LinkedIn URL -->
-            <a class="contact-link"
-               href="#"
-               target="_blank">
-               LinkedIn – https://www.linkedin.com/in/hina-arshad-998530288/
-            </a>
-
-            <!-- Replace with your real email -->
-           <a class="contact-link"
-   href="mailto:arshadhina991@gmail.com">
-   Email – arshadhina991@gmail.com
-</a>
-
-        </div>
-
+<footer class="footer">
+    <div class="container">
+        <p>© 2026 Hina Arshad. All Rights Reserved.</p>
+        <p>Generative AI Developer | AI Agents | AI Automation</p>
     </div>
-</div>
-</section>
-
-<!-- FOOTER -->
-<footer>
-<div class="container">
-
-    <div class="footer-name">Hina Arshad</div>
-
-    <p>
-        Generative AI Developer | AI Applications
-    </p>
-
-    <p>
-        © 2026 Hina Arshad. All Rights Reserved.
-    </p>
-
-</div>
 </footer>
-
-<!-- JAVASCRIPT -->
-<script>
-
-function toggleMenu() {
-    document.getElementById("navLinks")
-        .classList.toggle("active");
-}
-
-function closeMenu() {
-    document.getElementById("navLinks")
-        .classList.remove("active");
-}
-
-</script>
 
 </body>
 </html>

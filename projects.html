@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projects | Hina Arshad</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+
+
+    <button class="mobile-menu-btn" id="mobileSidebarToggle"
+            aria-label="Open sidebar" aria-expanded="false">
+        ☰
+    </button>
+
+    <div class="sidebar-overlay" id="sidebarOverlay"></div>
+
+    <aside class="sidebar" id="portfolioSidebar">
+
+        <div class="sidebar-header">
+            <a href="index.html" class="sidebar-logo">
+                Hina<span>.</span>
+            </a>
+
+            <button class="sidebar-toggle" id="sidebarToggle"
+                    aria-label="Collapse sidebar" aria-expanded="true">
+                ‹
+            </button>
+        </div>
+
+        <div class="sidebar-profile">
+            <div class="profile-avatar">HA</div>
+            <h3>Hina Arshad</h3>
+            <p>Generative AI Developer</p>
+        </div>
+
+        <div class="sidebar-divider"></div>
+
+        <p class="sidebar-heading">MAIN MENU</p>
+
+        <nav class="sidebar-nav">
+            
+            <a href="index.html" class="sidebar-link ">
+                <span class="sidebar-icon">⌂</span>
+                <span class="sidebar-label">Home</span>
+            </a>
+        
+            <a href="about.html" class="sidebar-link ">
+                <span class="sidebar-icon">◉</span>
+                <span class="sidebar-label">About</span>
+            </a>
+        
+            <a href="skills.html" class="sidebar-link ">
+                <span class="sidebar-icon">✦</span>
+                <span class="sidebar-label">Skills</span>
+            </a>
+        
+            <a href="projects.html" class="sidebar-link active">
+                <span class="sidebar-icon">▦</span>
+                <span class="sidebar-label">Projects</span>
+            </a>
+        
+            <a href="education.html" class="sidebar-link ">
+                <span class="sidebar-icon">▤</span>
+                <span class="sidebar-label">Education</span>
+            </a>
+        
+            <a href="contact.html" class="sidebar-link ">
+                <span class="sidebar-icon">✉</span>
+                <span class="sidebar-label">Contact</span>
+            </a>
+        
+        </nav>
+
+        <div class="sidebar-bottom">
+            <button class="theme-btn" id="themeToggle"
+                    aria-label="Change theme">
+                ☀️ / 🌙
+                <span class="sidebar-label">Change Theme</span>
+            </button>
+
+            <p class="sidebar-caption">Portfolio 4.0</p>
+        </div>
+
+    </aside>
+    
+
+<main>
+
+<section class="page-section">
+    <div class="container">
+        <p class="subtitle">MY WORK & DEVELOPMENT</p>
+        <h1>Featured <span>Projects</span></h1>
+
+        <div class="grid">
+
+            <div class="card">
+                <h2>AgriVision AI</h2>
+                <p>
+                    An AI-powered agriculture application that analyzes
+                    plant leaf images to identify supported crop diseases
+                    using a trained deep learning model.
+                </p>
+                <p><strong>Technologies:</strong> TensorFlow, MobileNetV2, Streamlit, Python</p>
+                <a href="https://github.com/hinaarshad302/agrivision-ai" target="_blank">GitHub Repository →</a>
+            </div>
+
+            <div class="card">
+                <h2>Urdu Resume Skill Extractor</h2>
+                <p>
+                    An AI-assisted resume analysis application that
+                    extracts candidate information from documents and
+                    supports English and Urdu CV generation.
+                </p>
+                <p><strong>Technologies:</strong> Python, Streamlit, Google Gemini, PDF Processing</p>
+                <a href="https://github.com/hinaarshad302/urdu-resume-skill-extractor" target="_blank">GitHub Repository →</a>
+                <br>
+                <a href="https://urdu-resume-skill-extractor-3vjtecyvnp6rgfuqgf7t8w.streamlit.app/" target="_blank">Live Demo →</a>
+            </div>
+
+            <div class="card">
+                <h2>Nexora AI</h2>
+                <p>
+                    A coordinated multi-agent workspace with specialized
+                    agents for task planning, execution, quality checking,
+                    and final response review.
+                </p>
+                <p><strong>Technologies:</strong> Python, CrewAI, Groq API, Streamlit, Supabase</p>
+                <a href="https://github.com/hinaarshad302/parallel-multi-agent-system" target="_blank">GitHub Repository →</a>
+                <br>
+                <a href="https://parallel-multi-agent-system-kijnmteevpxi38tvdrrafi.streamlit.app/" target="_blank">Live Demo →</a>
+            </div>
+
+            <div class="card">
+                <h2>Hospital Knowledge Base Assistant</h2>
+                <p>
+                    A document-based AI question-answering application
+                    that retrieves relevant information from hospital
+                    documents to generate contextual answers.
+                </p>
+                <p><strong>Technologies:</strong> Python, RAG, FAISS, Sentence Transformers, Gemini</p>
+                <a href="https://github.com/hinaarshad302/hospital-knowledge-base-assistant" target="_blank">GitHub Repository →</a>
+            </div>
+
+            <div class="card">
+                <h2>AI Email Generator</h2>
+                <p>
+                    An AI-powered application that generates professional
+                    emails based on purpose, recipient, tone, length,
+                    and language.
+                </p>
+                <p><strong>Technologies:</strong> Python, Streamlit, Google Gemini API</p>
+                <a href="https://github.com/hinaarshad302/ai-email-generator" target="_blank">GitHub Repository →</a>
+                <br>
+                <a href="https://ai-email-generator-dn98jmhosvrclnsufzgzha.streamlit.app/" target="_blank">Live Demo →</a>
+            </div>
+
+            <div class="card">
+                <h2>Comment & Emoji-to-Content Assistant</h2>
+                <p>
+                    An AI content creation application that transforms
+                    topics, comments, and emojis into social media content
+                    for different platforms and languages.
+                </p>
+                <p><strong>Technologies:</strong> Python, Streamlit, Google Gemini API</p>
+                <a href="https://github.com/hinaarshad302/Comment-Content-Assistant" target="_blank">GitHub Repository →</a>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+</main>
+
+<footer class="footer">
+    <div class="container">
+        <p>© 2026 Hina Arshad. All Rights Reserved.</p>
+        <p>Generative AI Developer | AI Agents | AI Automation</p>
+    </div>
+</footer>
+
+</body>
+</html>
